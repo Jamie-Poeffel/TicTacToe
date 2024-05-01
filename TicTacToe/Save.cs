@@ -21,6 +21,7 @@ namespace TicTacToe
     }
     private bool SaveScore(string filename)
     {
+      // save the file in the ordner SavedScores with a chosen filename
       String Filepath = $".\\..\\..\\..\\SavedScores\\{filename}.txt";
       if (!File.Exists(Filepath))
       {
