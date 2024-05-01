@@ -36,11 +36,12 @@
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(300, 350);
       this.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
       this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+      this.MaximumSize = new System.Drawing.Size(318, 397);
+      this.MinimumSize = new System.Drawing.Size(318, 397);
       this.Name = "MainForms";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-      this.Text = "Form1";
+      this.Text = "Tictactoe";
       this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OnFormsClosing);
       this.Load += new System.EventHandler(this.OnFormsLoad);
       this.ResumeLayout(false);

@@ -15,7 +15,7 @@ namespace TicTacToe
   {
     WriteLogs Log = null;
     Pieces[,] Board = new Pieces[3, 3];
-    int role = 0, xScore = 0, oScore = 0;
+    public int role = 0, xScore = 0, oScore = 0;
     Label Lblscore = new Label();
     public MainForms()
     {
@@ -128,7 +128,8 @@ namespace TicTacToe
 
     private void OnFormsClosing(object sender, FormClosingEventArgs e)
     {
-      
+      Save save = new Save(this);
+      save.ShowDialog();
       Log = new WriteLogs(0);
     }
   }
