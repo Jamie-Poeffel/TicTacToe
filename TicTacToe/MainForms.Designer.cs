@@ -1,6 +1,6 @@
 ﻿namespace TicTacToe
 {
-  partial class Form1
+  partial class MainForms
   {
     /// <summary>
     /// Erforderliche Designervariable.
@@ -28,10 +28,19 @@
     /// </summary>
     private void InitializeComponent()
     {
-      this.components = new System.ComponentModel.Container();
+      this.SuspendLayout();
+      // 
+      // MainForms
+      // 
+      this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(800, 450);
+      this.Name = "MainForms";
       this.Text = "Form1";
+      this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OnFormsClosing);
+      this.Load += new System.EventHandler(this.OnFormsLoad);
+      this.ResumeLayout(false);
+
     }
 
     #endregion

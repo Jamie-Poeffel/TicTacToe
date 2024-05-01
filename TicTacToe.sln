@@ -11,9 +11,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dokumentation", "Dokumentat
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logs", "Logs", "{9DFF36F3-1FC8-4048-9B7F-B58436E61006}"
-	ProjectSection(SolutionItems) = preProject
-		Logs\Logs.txt = Logs\Logs.txt
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
