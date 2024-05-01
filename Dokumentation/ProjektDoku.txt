@@ -1,1 +1,3 @@
 Ich werde ein TicTacToe Game erstellen in dem Zwei Spieler gegen einander Spielen können.
+Ich werde logs ein bauen so dass man sehen kann was falsch gelaufen ist und wer gewonnen hat.
+Ich werde auch versuchen eine Ai einzubauen dass man nicht immer einen gegner braucht.
