@@ -65,11 +65,12 @@
       // LblSave
       // 
       this.LblSave.AutoSize = true;
-      this.LblSave.Location = new System.Drawing.Point(42, 9);
+      this.LblSave.Location = new System.Drawing.Point(35, 9);
       this.LblSave.Name = "LblSave";
-      this.LblSave.Size = new System.Drawing.Size(152, 16);
+      this.LblSave.Size = new System.Drawing.Size(76, 16);
       this.LblSave.TabIndex = 3;
-      this.LblSave.Text = "Please give a File name";
+      this.LblSave.Text = "Save score";
+      this.LblSave.Click += new System.EventHandler(this.LblSave_Click);
       // 
       // Save
       // 

@@ -42,5 +42,10 @@ namespace TicTacToe
         SaveScore(TbxFilename.Text);
       }
     }
+
+    private void LblSave_Click(object sender, EventArgs e)
+    {
+
+    }
   }
 }
