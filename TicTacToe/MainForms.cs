@@ -61,7 +61,7 @@ namespace TicTacToe
         }
         role += 1;
         checkWinner();
-        if (role == 9) resteBord();
+        if (role == 9) { resteBord(); Log = new WriteLogs("Draw: Score: "+ "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); };
       }
       else
       {
@@ -104,8 +104,8 @@ namespace TicTacToe
 
     private void done(int i, int j)
     {
-      if (Board[i, j].state == States.X) { xScore++; Log = new WriteLogs("Winner:  Winner is "+ Board[i, j].state.ToString() + "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); }
-      else { oScore++; Log = new WriteLogs("Winner:  Winner is " + Board[i, j].state.ToString() + "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); }
+      if (Board[i, j].state == States.X) { xScore++; Log = new WriteLogs("Winner:  Winner is "+ Board[i, j].state.ToString() +" Score: "+ "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); }
+      else { oScore++; Log = new WriteLogs("Winner:  Winner is " + Board[i, j].state.ToString() + " Score: " + "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); }
       resteBord();
       Lblscore.Text = "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString();
     }
@@ -118,6 +118,7 @@ namespace TicTacToe
           Board[i, j].Image = null;
           Board[i, j].state = States.F;
         }
+      role = 0;
     }
 
     private void OnFormsLoad(object sender, EventArgs e)
@@ -127,6 +128,7 @@ namespace TicTacToe
 
     private void OnFormsClosing(object sender, FormClosingEventArgs e)
     {
+      
       Log = new WriteLogs(0);
     }
   }
