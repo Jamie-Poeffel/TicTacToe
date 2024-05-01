@@ -17,16 +17,17 @@ namespace TicTacToe
     public Save(MainForms ma)
     {
       InitializeComponent();
-      MF = ma; 
+      MF = ma;
     }
-    private void SaveScore(string filename)
+    private bool SaveScore(string filename)
     {
       String Filepath = $".\\..\\..\\..\\SavedScores\\{filename}.txt";
       if (!File.Exists(Filepath))
       {
         File.WriteAllText(Filepath, $"{MF.xScore}, {MF.oScore}" + "\n" + $"Score: PlX: {MF.xScore} - PlO: {MF.oScore}");
+        return true;
       }
-      else MessageBox.Show("Name is given");
+      else return false;
     }
 
     private void OnClosing(object sender, FormClosingEventArgs e)
@@ -37,9 +38,13 @@ namespace TicTacToe
         e.Cancel = true;
         MessageBox.Show("Filename must be given");
       }
-      else 
+      else
       {
-        SaveScore(TbxFilename.Text);
+        if (!SaveScore(TbxFilename.Text))
+        {
+          MessageBox.Show("Name is given");
+          e.Cancel = true;
+        }
       }
     }
 
