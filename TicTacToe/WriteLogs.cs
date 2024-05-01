@@ -16,7 +16,9 @@ namespace TicTacToe
     private const String FilePfad = ".\\..\\..\\..\\Logs\\Logs.txt";
 
 
-     // Beim aufrufen dieser klasse kann man sagen wie man in das File Logs.txt schreiben will mit einer fehler meldung oder mit einer message oder wann die app geöffet wurde und wann sie geschlossen wurde.
+     // Beim aufrufen dieser klasse kann man sagen wie man in das File Logs.txt -
+     // schreiben will mit einer fehler meldung oder mit einer message oder wann -
+     // sdie app geöffet wurde und wann sie geschlossen wurde.
     public WriteLogs(Exception e)
     {
       Task.Run(Wait);
@@ -35,6 +37,7 @@ namespace TicTacToe
 
     private void Write(string message)
     {
+      // diese Methode schreibt das datum und die message in das file Logs.txt
       using (StreamWriter writer = new StreamWriter(FilePfad, true))
       {
         writer.WriteLine($"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}] {message}");
@@ -42,6 +45,7 @@ namespace TicTacToe
     }
     private void OnStartClose(byte i)
     {
+      // diese Methode schreibt wann die App geöffnet wurde und wann sie wieder geschlossen wurde.
       string message = (i == 0) ? "Closed" : "Opened";
       if (File.Exists(FilePfad))
       {
@@ -61,6 +65,7 @@ namespace TicTacToe
     }
     private void Exep(Exception e)
     {
+      // Diese Methode schreibt Fehler meldungen in das file Logs.txt
       string message = $"Error : {e}";
       using (StreamWriter writer = new StreamWriter(FilePfad, true))
       {
@@ -69,6 +74,7 @@ namespace TicTacToe
     }
     static async Task Wait()
     {
+      // Dieser Task erstellt das file Logs.txt wenn es nicht vorhanden ist und wartet bis es benutzt werden kann.
       if (!File.Exists(FilePfad))
       {
         File.WriteAllText(FilePfad, "Logs Erstellt\n");
