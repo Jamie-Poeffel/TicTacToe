@@ -32,6 +32,8 @@ namespace TicTacToe
 
     private void OnClosing(object sender, FormClosingEventArgs e)
     {
+      // Wenn das Eingabe fenster schliesst und Dialog reslutat Ok ist und Textfeld nicht Leer ist.
+      // speichern in datei mit dateiname 
       if (DialogResult != DialogResult.OK) return;
       if (string.IsNullOrEmpty(TbxFilename.Text))
       {
@@ -40,6 +42,7 @@ namespace TicTacToe
       }
       else
       {
+        // Wenn datei name schon vergeben dann nicht schliessen sondern ändern lassen
         if (!SaveScore(TbxFilename.Text))
         {
           MessageBox.Show("Name is given");
@@ -48,9 +51,5 @@ namespace TicTacToe
       }
     }
 
-    private void LblSave_Click(object sender, EventArgs e)
-    {
-
-    }
   }
 }

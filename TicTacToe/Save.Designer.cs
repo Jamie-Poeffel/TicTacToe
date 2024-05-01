@@ -70,7 +70,6 @@
       this.LblSave.Size = new System.Drawing.Size(76, 16);
       this.LblSave.TabIndex = 3;
       this.LblSave.Text = "Save score";
-      this.LblSave.Click += new System.EventHandler(this.LblSave_Click);
       // 
       // Save
       // 
