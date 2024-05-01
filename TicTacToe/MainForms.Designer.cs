@@ -32,10 +32,14 @@
       // 
       // MainForms
       // 
-      this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+      this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 25F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(800, 450);
+      this.ClientSize = new System.Drawing.Size(300, 350);
+      this.Font = new System.Drawing.Font("Courier New", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+      this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+      this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
       this.Name = "MainForms";
+      this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "Form1";
       this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OnFormsClosing);
       this.Load += new System.EventHandler(this.OnFormsLoad);

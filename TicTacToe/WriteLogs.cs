@@ -40,18 +40,18 @@ namespace TicTacToe
       // diese Methode schreibt das datum und die message in das file Logs.txt
       using (StreamWriter writer = new StreamWriter(FilePfad, true))
       {
-        writer.WriteLine($"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}] {message}");
+        writer.WriteLine($"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}]: {message}");
       }
     }
     private void OnStartClose(byte i)
     {
       // diese Methode schreibt wann die App geöffnet wurde und wann sie wieder geschlossen wurde.
-      string message = (i == 0) ? "Closed" : "Opened";
+      string message = (i == 0) ? "App Closed" : "App Started";
       if (File.Exists(FilePfad))
       {
         using (StreamWriter writer = new StreamWriter(FilePfad, true))
         {
-          writer.WriteLine($"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}] {message}");
+          writer.WriteLine($"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}]: {message}");
         }
       }
       else 
@@ -69,7 +69,7 @@ namespace TicTacToe
       string message = $"Error : {e}";
       using (StreamWriter writer = new StreamWriter(FilePfad, true))
       {
-        writer.WriteLine($"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}] {message}");
+        writer.WriteLine($"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}]: {message}");
       }
     }
     static async Task Wait()
@@ -77,7 +77,7 @@ namespace TicTacToe
       // Dieser Task erstellt das file Logs.txt wenn es nicht vorhanden ist und wartet bis es benutzt werden kann.
       if (!File.Exists(FilePfad))
       {
-        File.WriteAllText(FilePfad, "Logs Erstellt\n");
+        File.WriteAllText(FilePfad, $"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}]: Logs Erstellt\n");
       }
 
       while (!File.Exists(FilePfad))
