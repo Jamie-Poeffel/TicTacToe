@@ -25,6 +25,7 @@ namespace TicTacToe
 
     private void Initial()
     {
+      //Create the bord and ScoreLabel
       for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
         {
@@ -38,6 +39,7 @@ namespace TicTacToe
 
     private void LabelScore()
     {
+      //create the Scorelabel
       Lblscore.Location = new Point(0, 320);
       Lblscore.Width = 300;
       Lblscore.Text = "PlX: 0 - PlO: 0";
@@ -46,6 +48,8 @@ namespace TicTacToe
 
     private void Play(object sender, EventArgs e)
     {
+      //When a button on the board is clicked it changes the player and the shown picture 
+      //on the screen.
       int i = ((Button)sender).Top / 100, j = ((Button)sender).Left / 100;
       if (Board[i, j].state == States.F)
       {
@@ -61,6 +65,7 @@ namespace TicTacToe
         }
         role += 1;
         checkWinner();
+        //if there are 9 buttons pressed send tho logs Draw and reset the bord
         if (role == 9) { resteBord(); Log = new WriteLogs("Draw: Score: "+ "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); };
       }
       else
@@ -73,6 +78,7 @@ namespace TicTacToe
     private void checkWinner()
     {
       // Rows
+      //check if rows are full in a winning position
       for (int i = 0; i < 3; i++)
         if (Board[i, 1].state == Board[i, 0].state
           && Board[i, 1].state == Board[i, 2].state
@@ -82,6 +88,7 @@ namespace TicTacToe
           return;
         }
       // Colunms
+      //check if colunms are full in a winning position
       for (int j = 0; j < 3; j++) 
         if (Board[1, j].state == Board[0, j].state
           && Board[1, j].state == Board[2, j].state
@@ -92,6 +99,7 @@ namespace TicTacToe
         }
 
       // Diagonals
+      //check if the diagonals are full in a winning position
       if (Board[0, 0].state == Board[1, 1].state
         && Board[1, 1].state == Board[2, 2].state
         && Board[1, 1].state != States.F)
@@ -104,6 +112,7 @@ namespace TicTacToe
 
     private void done(int i, int j)
     {
+      // send the winner and the score to the logs and rest the bord and show the score on the score label
       if (Board[i, j].state == States.X) { xScore++; Log = new WriteLogs("Winner:  Winner is "+ Board[i, j].state.ToString() +" Score: "+ "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); }
       else { oScore++; Log = new WriteLogs("Winner:  Winner is " + Board[i, j].state.ToString() + " Score: " + "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); }
       resteBord();
@@ -112,6 +121,7 @@ namespace TicTacToe
 
     private void resteBord()
     {
+      // clears the whole bord
       for (int i = 0; i < 3; i++) 
         for (int j = 0; j < 3; j++)
         {
@@ -123,11 +133,13 @@ namespace TicTacToe
 
     private void OnFormsLoad(object sender, EventArgs e)
     {
+      //when the app is opend send a oppaning Log tag
       Log = new WriteLogs(1);
     }
 
     private void OnFormsClosing(object sender, FormClosingEventArgs e)
     {
+      //create the saving and log that the app is bin closed
       Save save = new Save(this);
       save.ShowDialog();
       Log = new WriteLogs(0);
