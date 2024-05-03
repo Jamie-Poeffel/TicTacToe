@@ -21,6 +21,7 @@ namespace TicTacToe
     private int _starty = 0;
     private double _Indexscore = double.NaN;
     List<Pieces> freeSpace = new List<Pieces>();
+    List<Stat> GoodWays = new List<Stat>();
     Pieces[,] Board = null;
 
 
@@ -50,6 +51,7 @@ namespace TicTacToe
       if (CheckforPossibleWinloss() == States.O)
       {
         _Indexscore = 1;
+        stat = Stat.W;
       }
       else if (CheckforPossibleWinloss() == States.X)
       {
