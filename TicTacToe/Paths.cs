@@ -16,19 +16,15 @@ namespace TicTacToe
   internal class Paths
   {
     public Stat stat = Stat.D;
-    private int _anzahlfelder = 0;
-    private int _startx = 0;
-    private int _starty = 0;
     private double _Indexscore = double.NaN;
     List<Pieces> freeSpace = new List<Pieces>();
-    List<Stat> GoodWays = new List<Stat>();
     Pieces[,] Board = null;
 
 
 
     public Paths(Pieces[,] Bord, int anzahlfelder)
     {
-      _anzahlfelder = anzahlfelder;
+
       Search();
       Board = Bord;
 
