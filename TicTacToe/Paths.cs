@@ -24,11 +24,8 @@ namespace TicTacToe
 
     public Paths(Pieces[,] Bord, int anzahlfelder)
     {
-
       Search();
       Board = Bord;
-
-
     }
 
     private void Search()
