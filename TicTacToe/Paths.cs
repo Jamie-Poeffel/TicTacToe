@@ -18,35 +18,46 @@ namespace TicTacToe
     public Stat stat = Stat.D;
     private int _anzahlfelder = 0;
     private int _startx = 0;
-    private int _starty = 0; 
+    private int _starty = 0;
     private double _Indexscore = double.NaN;
     List<Pieces> freeSpace = new List<Pieces>();
     Pieces[,] Board = null;
 
 
 
-    public Paths(Pieces[,] Bord,int anzahlfelder)
+    public Paths(Pieces[,] Bord, int anzahlfelder)
     {
       _anzahlfelder = anzahlfelder;
       Search();
       Board = Bord;
 
-      
+
     }
 
     private void Search()
-    { 
-    for (int i = 0; i < 3; i++) 
+    {
+      for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
         {
-          if(Board[i, j].state != States.F)
+          if (Board[i, j].state != States.F)
           {
             freeSpace.Add(Board[i, j]);
           }
         }
     }
+    private void checke()
+    {
+      if (CheckforPossibleWinloss() == States.O)
+      {
+        _Indexscore = 1;
+      }
+      else if (CheckforPossibleWinloss() == States.X)
+      {
+        _Indexscore = 0.1;
+      }
+    }
 
-    private States CheckforPossibleWinlos()
+    private States CheckforPossibleWinloss()
     {
       // Rows
       //check if rows are full in a winning position
@@ -77,6 +88,8 @@ namespace TicTacToe
       && Board[1, 1].state == Board[2, 0].state
       && Board[1, 1].state != States.F)
         return Board[1, 1].state;
+
+      return Board[0, 0].state;
     }
   }
 }
