@@ -52,6 +52,7 @@
     <Compile Include="MainForms.Designer.cs">
       <DependentUpon>MainForms.cs</DependentUpon>
     </Compile>
+    <Compile Include="Paths.cs" />
     <Compile Include="Pieces.cs">
       <SubType>Component</SubType>
     </Compile>
