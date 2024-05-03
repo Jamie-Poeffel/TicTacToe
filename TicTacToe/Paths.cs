@@ -89,7 +89,7 @@ namespace TicTacToe
       && Board[1, 1].state != States.F)
         return Board[1, 1].state;
 
-      return Board[0, 0].state;
+      return States.F;
     }
   }
 }
