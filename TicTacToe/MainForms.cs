@@ -14,6 +14,7 @@ namespace TicTacToe
   public partial class MainForms : Form
   {
     WriteLogs Log = null;
+    Comp comp = null;
     Pieces[,] Board = new Pieces[3, 3];
     public int role = 0, xScore = 0, oScore = 0;
     Label Lblscore = new Label();
@@ -46,7 +47,7 @@ namespace TicTacToe
       this.Controls.Add(Lblscore);
     }
 
-    private void Play(object sender, EventArgs e)
+    public void Play(object sender, EventArgs e)
     {
       //When a button on the board is clicked it changes the player and the shown picture 
       //on the screen.
@@ -60,6 +61,7 @@ namespace TicTacToe
         }
         else
         {
+          comp = new Comp(Board, this, role % 2 == 0 ? States.X : States.O);
           Board[i, j].state = States.O;
           Board[i, j].Image = Properties.Resources.O;
         }
@@ -75,7 +77,7 @@ namespace TicTacToe
       }
     }
 
-    private void checkWinner()
+    public void checkWinner()
     {
       // Rows
       //check if rows are full in a winning position
