@@ -33,10 +33,10 @@ namespace TicTacToe
       var bord = Board;
       var max_player = (main.role % 2 == 0) ? States.X : States.O;
       var other_player = (max_player == States.X) ? States.O : States.X;
-      var Best = 0;
+      var Best = Pieces.Best();
 
       if (state == max_player)
-        Best = int.MinValue;
+        Best = Pieces.Best(0, 0, int.MinValue);
       else
         Best = int.MaxValue;
       for (var i = 0; i < num_Empty(Board); i++)

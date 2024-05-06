@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace TicTacToe
 {
-  public partial class MainForms : Form
+  partial class MainForms : Form
   {
     WriteLogs Log = null;
     Comp comp = null;
@@ -30,7 +30,7 @@ namespace TicTacToe
       for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
         {
-          Board[i, j] = new Pieces(j * 100, i * 100);
+          Board[i, j] = new Pieces(j * 100, i * 100, 0);
           Board[i, j].Click += Play;
           Board[i, j].Cursor = Cursors.Hand;
           this.Controls.Add(Board[i, j]);
