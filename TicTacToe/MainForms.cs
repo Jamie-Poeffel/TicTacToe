@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace TicTacToe
 {
-  partial class MainForms : Form
+  public partial class MainForms : Form
   {
     WriteLogs Log = null;
-    Comp comp = null;
     Pieces[,] Board = new Pieces[3, 3];
     public int role = 0, xScore = 0, oScore = 0;
+    AI AI = new AI();
     Label Lblscore = new Label();
     public MainForms()
     {
@@ -30,7 +30,7 @@ namespace TicTacToe
       for (int i = 0; i < 3; i++)
         for (int j = 0; j < 3; j++)
         {
-          Board[i, j] = new Pieces(j * 100, i * 100, 0);
+          Board[i, j] = new Pieces(j * 100, i * 100);
           Board[i, j].Click += Play;
           Board[i, j].Cursor = Cursors.Hand;
           this.Controls.Add(Board[i, j]);
@@ -59,16 +59,17 @@ namespace TicTacToe
           Board[i, j].state = States.X;
           Board[i, j].Image = Properties.Resources.X;
         }
-        else
-        {
-          comp = new Comp(Board, this, role % 2 == 0 ? States.X : States.O);
-          Board[i, j].state = States.O;
-          Board[i, j].Image = Properties.Resources.O;
-        }
-        role += 1;
+          int[] a = AI.MiniMax(Board, role % 2 == 0 ? States.X : States.O);
+          if (a[0] != -1 && a[1] != -1)
+          {
+           Board[a[0], a[1]].state = States.O;
+           Board[a[0], a[1]].Image = Properties.Resources.O;
+          }
+       
+          role += 2;
         checkWinner();
         //if there are 9 buttons pressed send tho logs Draw and reset the bord
-        if (role == 9) { resteBord(); Log = new WriteLogs("Draw: Score: "+ "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); };
+        if (role == 10) { resteBord(); Log = new WriteLogs("Draw: Score: "+ "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); };
       }
       else
       {
