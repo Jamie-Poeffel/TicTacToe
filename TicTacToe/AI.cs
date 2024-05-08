@@ -8,7 +8,6 @@ namespace TicTacToe
 {
   class AI
   {
-    BestScore bs = null;
     public int[] MiniMax(Pieces[,] board, States state)
     {
       int bestScore = (state == States.O) ? int.MinValue : int.MaxValue;
