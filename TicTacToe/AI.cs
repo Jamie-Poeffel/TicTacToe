@@ -8,6 +8,7 @@ namespace TicTacToe
 {
   class AI
   {
+    BestScore bs = null;
     public int[] MiniMax(Pieces[,] board, States state)
     {
       int bestScore = (state == States.O) ? int.MinValue : int.MaxValue;
@@ -48,8 +49,9 @@ namespace TicTacToe
           }
         }
       }
+      bs = new BestScore($"Best Move is: {bestMove[0]}, {bestMove[1]}");
       return bestMove;
-
+      
     }
     private bool IsBoardFull(Pieces[,] board) 
     {
