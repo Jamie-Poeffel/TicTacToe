@@ -17,7 +17,6 @@ namespace TicTacToe
   }
   class Pieces : Button
   {
-    BestScore Log = null;
     public States state = States.F;
     //Create buttons for the grid
     public Pieces(int x, int y)
