@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AI.cs" />
-    <Compile Include="BestScore.cs" />
     <Compile Include="MainForms.cs">
       <SubType>Form</SubType>
     </Compile>
