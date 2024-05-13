@@ -59,7 +59,7 @@ namespace TicTacToe
           Board[i, j].state = States.X;
           Board[i, j].Image = Properties.Resources.X;
         }
-          int[] a = AI.MiniMax(Board, role % 2 == 0 ? States.X : States.O);
+          int[] a = AI.GetMove(Board, role % 2 == 0 ? States.X : States.O);
           if (a[0] != -1 && a[1] != -1)
           {
            Board[a[0], a[1]].state = States.O;

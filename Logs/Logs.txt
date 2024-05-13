@@ -300,3 +300,22 @@
 [2024-05-08 22:20:44]: Winner:  Winner is X Score: PlX: 9 - PlO: 3
 [2024-05-08 22:20:49]: Winner:  Winner is X Score: PlX: 10 - PlO: 3
 [2024-05-08 22:20:55]: App Closed
+[2024-05-13 10:18:34]: App Started
+[2024-05-13 10:18:43]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-13 10:18:51]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-13 10:18:59]: Winner:  Winner is O Score: PlX: 0 - PlO: 1
+[2024-05-13 10:19:09]: Winner:  Winner is X Score: PlX: 1 - PlO: 1
+[2024-05-13 10:19:15]: App Closed
+[2024-05-13 10:27:40]: App Started
+[2024-05-13 10:27:49]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-13 10:28:22]: App Started
+[2024-05-13 10:28:29]: App Closed
+[2024-05-13 10:28:32]: App Started
+[2024-05-13 10:28:37]: App Closed
+[2024-05-13 10:28:40]: App Started
+[2024-05-13 10:28:43]: App Closed
+[2024-05-13 10:30:04]: App Started
+[2024-05-13 10:30:10]: Winner:  Winner is X Score: PlX: 1 - PlO: 0
+[2024-05-13 10:30:18]: Draw: Score: PlX: 1 - PlO: 0
+[2024-05-13 10:30:27]: Draw: Score: PlX: 1 - PlO: 0
+[2024-05-13 10:30:30]: App Closed
