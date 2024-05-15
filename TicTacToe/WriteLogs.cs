@@ -16,9 +16,9 @@ namespace TicTacToe
     private const String FilePfad = ".\\..\\..\\..\\Logs\\Logs.txt";
 
 
-     // Beim aufrufen dieser klasse kann man sagen wie man in das File Logs.txt -
-     // schreiben will mit einer fehler meldung oder mit einer message oder wann -
-     // sdie app geöffet wurde und wann sie geschlossen wurde.
+    // Beim aufrufen dieser klasse kann man sagen wie man in das File Logs.txt -
+    // schreiben will mit einer fehler meldung oder mit einer message oder wann -
+    // sdie app geöffet wurde und wann sie geschlossen wurde.
     public WriteLogs(Exception e)
     {
       Task.Run(Wait);
@@ -49,17 +49,23 @@ namespace TicTacToe
       string message = (i == 0) ? "App Closed" : "App Started";
       if (File.Exists(FilePfad))
       {
-        using (StreamWriter writer = new StreamWriter(FilePfad, true))
-        {
-          writer.WriteLine($"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}]: {message}");
-        }
+        if (message == "App Closed")
+          using (StreamWriter writer = new StreamWriter(FilePfad, true))
+          {
+            writer.WriteLine($"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}]: {message}\n");
+          }
+        else
+          using (StreamWriter writer = new StreamWriter(FilePfad, true))
+          {
+            writer.WriteLine($"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}]: {message}");
+          }
       }
-      else 
+      else
       {
         do
         {
           Cursor.Current = Cursors.WaitCursor;
-        }while(!File.Exists(FilePfad));
+        } while (!File.Exists(FilePfad));
       }
 
     }
@@ -82,7 +88,7 @@ namespace TicTacToe
 
       while (!File.Exists(FilePfad))
       {
-        await Task.Delay(1000); 
+        await Task.Delay(1000);
       }
     }
   }
