@@ -40,3 +40,348 @@
 [2024-05-15 12:31:29]: Winner:  Winner is X Score: PlX: 1 - PlO: 0
 [2024-05-15 12:31:37]: App Closed
 
+[2024-05-15 12:32:15]: App Started
+[2024-05-15 12:32:38]: Winner:  Winner is X Score: PlX: 1 - PlO: 0
+[2024-05-15 12:32:42]: App Closed
+
+[2024-05-15 12:33:15]: App Started
+[2024-05-15 12:33:21]: Winner:  Winner is X Score: PlX: 1 - PlO: 0
+[2024-05-15 12:33:30]: App Closed
+
+[2024-05-15 12:33:32]: App Started
+[2024-05-15 12:33:56]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-15 12:34:02]: App Closed
+
+[2024-05-15 12:47:42]: App Started
+[2024-05-15 12:47:49]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-15 12:48:00]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-15 12:48:03]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-15 12:48:06]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-15 12:48:08]: Winner:  Winner is O Score: PlX: 0 - PlO: 1
+[2024-05-15 12:48:14]: Draw: Score: PlX: 0 - PlO: 1
+[2024-05-15 12:48:16]: Error: Wrong Place
+[2024-05-15 12:48:21]: Draw: Score: PlX: 0 - PlO: 1
+[2024-05-15 12:48:24]: Draw: Score: PlX: 0 - PlO: 1
+[2024-05-15 12:48:27]: Winner:  Winner is O Score: PlX: 0 - PlO: 2
+[2024-05-15 12:48:30]: Winner:  Winner is O Score: PlX: 0 - PlO: 3
+[2024-05-15 12:48:33]: Winner:  Winner is O Score: PlX: 0 - PlO: 4
+[2024-05-15 12:48:35]: Winner:  Winner is O Score: PlX: 0 - PlO: 5
+[2024-05-15 12:48:37]: Winner:  Winner is O Score: PlX: 0 - PlO: 6
+[2024-05-15 12:48:38]: Winner:  Winner is O Score: PlX: 0 - PlO: 7
+[2024-05-15 12:48:41]: Error: Wrong Place
+[2024-05-15 12:48:41]: Winner:  Winner is O Score: PlX: 0 - PlO: 8
+[2024-05-15 12:48:43]: Winner:  Winner is O Score: PlX: 0 - PlO: 9
+[2024-05-15 12:48:44]: Winner:  Winner is O Score: PlX: 0 - PlO: 10
+[2024-05-15 12:48:45]: Winner:  Winner is O Score: PlX: 0 - PlO: 11
+[2024-05-15 12:48:46]: Winner:  Winner is O Score: PlX: 0 - PlO: 12
+[2024-05-15 12:48:47]: Winner:  Winner is O Score: PlX: 0 - PlO: 13
+[2024-05-15 12:48:50]: Error: Wrong Place
+[2024-05-15 12:48:50]: Winner:  Winner is O Score: PlX: 0 - PlO: 14
+[2024-05-15 12:48:54]: Winner:  Winner is O Score: PlX: 0 - PlO: 15
+[2024-05-15 12:48:54]: Winner:  Winner is O Score: PlX: 0 - PlO: 16
+[2024-05-15 12:48:55]: Winner:  Winner is O Score: PlX: 0 - PlO: 17
+[2024-05-15 12:48:55]: Winner:  Winner is O Score: PlX: 0 - PlO: 18
+[2024-05-15 12:48:56]: Winner:  Winner is O Score: PlX: 0 - PlO: 19
+[2024-05-15 12:48:57]: Winner:  Winner is O Score: PlX: 0 - PlO: 20
+[2024-05-15 12:48:57]: Winner:  Winner is O Score: PlX: 0 - PlO: 21
+[2024-05-15 12:48:58]: Winner:  Winner is O Score: PlX: 0 - PlO: 22
+[2024-05-15 12:48:59]: Winner:  Winner is O Score: PlX: 0 - PlO: 23
+[2024-05-15 12:48:59]: Winner:  Winner is O Score: PlX: 0 - PlO: 24
+[2024-05-15 12:49:00]: Winner:  Winner is O Score: PlX: 0 - PlO: 25
+[2024-05-15 12:49:01]: Winner:  Winner is O Score: PlX: 0 - PlO: 26
+[2024-05-15 12:49:01]: Winner:  Winner is O Score: PlX: 0 - PlO: 27
+[2024-05-15 12:49:02]: Winner:  Winner is O Score: PlX: 0 - PlO: 28
+[2024-05-15 12:49:03]: Winner:  Winner is O Score: PlX: 0 - PlO: 29
+[2024-05-15 12:49:03]: Winner:  Winner is O Score: PlX: 0 - PlO: 30
+[2024-05-15 12:49:04]: Winner:  Winner is O Score: PlX: 0 - PlO: 31
+[2024-05-15 12:49:04]: Winner:  Winner is O Score: PlX: 0 - PlO: 32
+[2024-05-15 12:49:05]: Winner:  Winner is O Score: PlX: 0 - PlO: 33
+[2024-05-15 12:49:06]: Winner:  Winner is O Score: PlX: 0 - PlO: 34
+[2024-05-15 12:49:06]: Winner:  Winner is O Score: PlX: 0 - PlO: 35
+[2024-05-15 12:49:07]: Winner:  Winner is O Score: PlX: 0 - PlO: 36
+[2024-05-15 12:49:08]: Winner:  Winner is O Score: PlX: 0 - PlO: 37
+[2024-05-15 12:49:08]: Winner:  Winner is O Score: PlX: 0 - PlO: 38
+[2024-05-15 12:49:09]: Winner:  Winner is O Score: PlX: 0 - PlO: 39
+[2024-05-15 12:49:09]: Winner:  Winner is O Score: PlX: 0 - PlO: 40
+[2024-05-15 12:49:10]: Winner:  Winner is O Score: PlX: 0 - PlO: 41
+[2024-05-15 12:49:11]: Winner:  Winner is O Score: PlX: 0 - PlO: 42
+[2024-05-15 12:49:11]: Winner:  Winner is O Score: PlX: 0 - PlO: 43
+[2024-05-15 12:49:12]: Winner:  Winner is O Score: PlX: 0 - PlO: 44
+[2024-05-15 12:49:13]: App Closed
+
+[2024-05-15 12:50:57]: App Started
+[2024-05-15 12:51:01]: Winner:  Winner is O Score: PlX: 0 - PlO: 1
+[2024-05-15 12:51:07]: Winner:  Winner is X Score: PlX: 1 - PlO: 1
+[2024-05-15 12:51:09]: Winner:  Winner is X Score: PlX: 2 - PlO: 1
+[2024-05-15 12:51:13]: Winner:  Winner is X Score: PlX: 3 - PlO: 1
+[2024-05-15 12:51:15]: Winner:  Winner is X Score: PlX: 4 - PlO: 1
+[2024-05-15 12:51:16]: Winner:  Winner is X Score: PlX: 5 - PlO: 1
+[2024-05-15 12:51:17]: Winner:  Winner is O Score: PlX: 5 - PlO: 2
+[2024-05-15 12:51:18]: Winner:  Winner is O Score: PlX: 5 - PlO: 3
+[2024-05-15 12:51:19]: Winner:  Winner is O Score: PlX: 5 - PlO: 4
+[2024-05-15 12:51:21]: Draw: Score: PlX: 5 - PlO: 4
+[2024-05-15 12:51:23]: Winner:  Winner is X Score: PlX: 6 - PlO: 4
+[2024-05-15 12:51:24]: Winner:  Winner is X Score: PlX: 7 - PlO: 4
+[2024-05-15 12:51:25]: Winner:  Winner is O Score: PlX: 7 - PlO: 5
+[2024-05-15 12:51:27]: Winner:  Winner is O Score: PlX: 7 - PlO: 6
+[2024-05-15 12:51:29]: Draw: Score: PlX: 7 - PlO: 6
+[2024-05-15 12:51:31]: Winner:  Winner is X Score: PlX: 8 - PlO: 6
+[2024-05-15 12:51:32]: Winner:  Winner is X Score: PlX: 9 - PlO: 6
+[2024-05-15 12:51:34]: Winner:  Winner is X Score: PlX: 10 - PlO: 6
+[2024-05-15 12:51:38]: Winner:  Winner is X Score: PlX: 11 - PlO: 6
+[2024-05-15 12:51:40]: Winner:  Winner is X Score: PlX: 12 - PlO: 6
+[2024-05-15 12:51:42]: Winner:  Winner is X Score: PlX: 13 - PlO: 6
+[2024-05-15 12:51:43]: Winner:  Winner is X Score: PlX: 14 - PlO: 6
+[2024-05-15 12:51:46]: Error: Wrong Place
+[2024-05-15 12:51:46]: Winner:  Winner is X Score: PlX: 15 - PlO: 6
+[2024-05-15 12:51:48]: Winner:  Winner is X Score: PlX: 16 - PlO: 6
+[2024-05-15 12:51:49]: Winner:  Winner is X Score: PlX: 17 - PlO: 6
+[2024-05-15 12:51:50]: Winner:  Winner is X Score: PlX: 18 - PlO: 6
+[2024-05-15 12:51:51]: Winner:  Winner is X Score: PlX: 19 - PlO: 6
+[2024-05-15 12:51:53]: Error: Wrong Place
+[2024-05-15 12:51:54]: Winner:  Winner is X Score: PlX: 20 - PlO: 6
+[2024-05-15 12:51:55]: Winner:  Winner is X Score: PlX: 21 - PlO: 6
+[2024-05-15 12:51:56]: Winner:  Winner is X Score: PlX: 22 - PlO: 6
+[2024-05-15 12:51:58]: Winner:  Winner is X Score: PlX: 23 - PlO: 6
+[2024-05-15 12:51:59]: Winner:  Winner is O Score: PlX: 23 - PlO: 7
+[2024-05-15 12:52:02]: Error: Wrong Place
+[2024-05-15 12:52:03]: Draw: Score: PlX: 23 - PlO: 7
+[2024-05-15 12:52:04]: Winner:  Winner is X Score: PlX: 24 - PlO: 7
+[2024-05-15 12:52:05]: Winner:  Winner is X Score: PlX: 25 - PlO: 7
+[2024-05-15 12:52:06]: Winner:  Winner is X Score: PlX: 26 - PlO: 7
+[2024-05-15 12:52:07]: Winner:  Winner is O Score: PlX: 26 - PlO: 8
+[2024-05-15 12:52:09]: Winner:  Winner is X Score: PlX: 27 - PlO: 8
+[2024-05-15 12:52:11]: Winner:  Winner is X Score: PlX: 28 - PlO: 8
+[2024-05-15 12:52:12]: Winner:  Winner is X Score: PlX: 29 - PlO: 8
+[2024-05-15 12:52:14]: Winner:  Winner is X Score: PlX: 30 - PlO: 8
+[2024-05-15 12:52:15]: Winner:  Winner is X Score: PlX: 31 - PlO: 8
+[2024-05-15 12:52:17]: Error: Wrong Place
+[2024-05-15 12:52:18]: Winner:  Winner is X Score: PlX: 32 - PlO: 8
+[2024-05-15 12:52:19]: Winner:  Winner is X Score: PlX: 33 - PlO: 8
+[2024-05-15 12:52:20]: Winner:  Winner is X Score: PlX: 34 - PlO: 8
+[2024-05-15 12:52:22]: Winner:  Winner is O Score: PlX: 34 - PlO: 9
+[2024-05-15 12:52:24]: Draw: Score: PlX: 34 - PlO: 9
+[2024-05-15 12:52:25]: Winner:  Winner is X Score: PlX: 35 - PlO: 9
+[2024-05-15 12:52:27]: Winner:  Winner is X Score: PlX: 36 - PlO: 9
+[2024-05-15 12:52:28]: Winner:  Winner is X Score: PlX: 37 - PlO: 9
+[2024-05-15 12:52:29]: Winner:  Winner is X Score: PlX: 38 - PlO: 9
+[2024-05-15 12:52:32]: Error: Wrong Place
+[2024-05-15 12:52:32]: Winner:  Winner is X Score: PlX: 39 - PlO: 9
+[2024-05-15 12:52:33]: Winner:  Winner is X Score: PlX: 40 - PlO: 9
+[2024-05-15 12:52:35]: Winner:  Winner is X Score: PlX: 41 - PlO: 9
+[2024-05-15 12:52:36]: Winner:  Winner is O Score: PlX: 41 - PlO: 10
+[2024-05-15 12:52:39]: Error: Wrong Place
+[2024-05-15 12:52:39]: Draw: Score: PlX: 41 - PlO: 10
+[2024-05-15 12:52:42]: Winner:  Winner is X Score: PlX: 42 - PlO: 10
+[2024-05-15 12:52:44]: Winner:  Winner is X Score: PlX: 43 - PlO: 10
+[2024-05-15 12:52:45]: Winner:  Winner is X Score: PlX: 44 - PlO: 10
+[2024-05-15 12:52:47]: Winner:  Winner is X Score: PlX: 45 - PlO: 10
+[2024-05-15 12:52:48]: Winner:  Winner is X Score: PlX: 46 - PlO: 10
+[2024-05-15 12:52:49]: Winner:  Winner is X Score: PlX: 47 - PlO: 10
+[2024-05-15 12:52:50]: Winner:  Winner is X Score: PlX: 48 - PlO: 10
+[2024-05-15 12:52:51]: Winner:  Winner is X Score: PlX: 49 - PlO: 10
+[2024-05-15 12:52:53]: Winner:  Winner is X Score: PlX: 50 - PlO: 10
+[2024-05-15 12:52:54]: Winner:  Winner is X Score: PlX: 51 - PlO: 10
+[2024-05-15 12:52:55]: Winner:  Winner is X Score: PlX: 52 - PlO: 10
+[2024-05-15 12:52:57]: Winner:  Winner is X Score: PlX: 53 - PlO: 10
+[2024-05-15 12:52:59]: Error: Wrong Place
+[2024-05-15 12:52:59]: Winner:  Winner is X Score: PlX: 54 - PlO: 10
+[2024-05-15 12:53:01]: Error: Wrong Place
+[2024-05-15 12:53:02]: Winner:  Winner is X Score: PlX: 55 - PlO: 10
+[2024-05-15 12:53:03]: Winner:  Winner is X Score: PlX: 56 - PlO: 10
+[2024-05-15 12:53:05]: Winner:  Winner is X Score: PlX: 57 - PlO: 10
+[2024-05-15 12:53:06]: Winner:  Winner is X Score: PlX: 58 - PlO: 10
+[2024-05-15 12:53:07]: Winner:  Winner is X Score: PlX: 59 - PlO: 10
+[2024-05-15 12:53:08]: Winner:  Winner is X Score: PlX: 60 - PlO: 10
+[2024-05-15 12:53:09]: Winner:  Winner is X Score: PlX: 61 - PlO: 10
+[2024-05-15 12:53:11]: Winner:  Winner is X Score: PlX: 62 - PlO: 10
+[2024-05-15 12:53:13]: Error: Wrong Place
+[2024-05-15 12:53:14]: Winner:  Winner is X Score: PlX: 63 - PlO: 10
+[2024-05-15 12:53:16]: Winner:  Winner is X Score: PlX: 64 - PlO: 10
+[2024-05-15 12:53:18]: Winner:  Winner is X Score: PlX: 65 - PlO: 10
+[2024-05-15 12:53:20]: Error: Wrong Place
+[2024-05-15 12:53:20]: Winner:  Winner is X Score: PlX: 66 - PlO: 10
+[2024-05-15 12:53:22]: Winner:  Winner is X Score: PlX: 67 - PlO: 10
+[2024-05-15 12:53:23]: Winner:  Winner is X Score: PlX: 68 - PlO: 10
+[2024-05-15 12:53:24]: Winner:  Winner is X Score: PlX: 69 - PlO: 10
+[2024-05-15 12:53:26]: Winner:  Winner is X Score: PlX: 70 - PlO: 10
+[2024-05-15 12:53:27]: Winner:  Winner is X Score: PlX: 71 - PlO: 10
+[2024-05-15 12:53:28]: Winner:  Winner is X Score: PlX: 72 - PlO: 10
+[2024-05-15 12:53:29]: Winner:  Winner is X Score: PlX: 73 - PlO: 10
+[2024-05-15 12:53:31]: Winner:  Winner is X Score: PlX: 74 - PlO: 10
+[2024-05-15 12:53:32]: Winner:  Winner is X Score: PlX: 75 - PlO: 10
+[2024-05-15 12:53:34]: Winner:  Winner is X Score: PlX: 76 - PlO: 10
+[2024-05-15 12:53:35]: Winner:  Winner is X Score: PlX: 77 - PlO: 10
+[2024-05-15 12:53:36]: Winner:  Winner is X Score: PlX: 78 - PlO: 10
+[2024-05-15 12:53:37]: Winner:  Winner is X Score: PlX: 79 - PlO: 10
+[2024-05-15 12:53:39]: Winner:  Winner is X Score: PlX: 80 - PlO: 10
+[2024-05-15 12:53:40]: Winner:  Winner is X Score: PlX: 81 - PlO: 10
+[2024-05-15 12:53:42]: Error: Wrong Place
+[2024-05-15 12:53:42]: Winner:  Winner is X Score: PlX: 82 - PlO: 10
+[2024-05-15 12:53:44]: Winner:  Winner is O Score: PlX: 82 - PlO: 11
+[2024-05-15 12:53:46]: Winner:  Winner is X Score: PlX: 83 - PlO: 11
+[2024-05-15 12:53:48]: Winner:  Winner is X Score: PlX: 84 - PlO: 11
+[2024-05-15 12:53:50]: Winner:  Winner is X Score: PlX: 85 - PlO: 11
+[2024-05-15 12:53:51]: Winner:  Winner is X Score: PlX: 86 - PlO: 11
+[2024-05-15 12:53:52]: Winner:  Winner is X Score: PlX: 87 - PlO: 11
+[2024-05-15 12:53:54]: Winner:  Winner is X Score: PlX: 88 - PlO: 11
+[2024-05-15 12:53:55]: Winner:  Winner is X Score: PlX: 89 - PlO: 11
+[2024-05-15 12:53:57]: Error: Wrong Place
+[2024-05-15 12:53:58]: Winner:  Winner is O Score: PlX: 89 - PlO: 12
+[2024-05-15 12:54:00]: Error: Wrong Place
+[2024-05-15 12:54:01]: Draw: Score: PlX: 89 - PlO: 12
+[2024-05-15 12:54:11]: Winner:  Winner is X Score: PlX: 90 - PlO: 12
+[2024-05-15 12:54:15]: Draw: Score: PlX: 90 - PlO: 12
+[2024-05-15 12:54:17]: Draw: Score: PlX: 90 - PlO: 12
+[2024-05-15 12:54:18]: Draw: Score: PlX: 90 - PlO: 12
+[2024-05-15 12:54:20]: Winner:  Winner is X Score: PlX: 91 - PlO: 12
+[2024-05-15 12:54:21]: Winner:  Winner is X Score: PlX: 92 - PlO: 12
+[2024-05-15 12:54:23]: Winner:  Winner is X Score: PlX: 93 - PlO: 12
+[2024-05-15 12:54:24]: Winner:  Winner is X Score: PlX: 94 - PlO: 12
+[2024-05-15 12:54:25]: Winner:  Winner is X Score: PlX: 95 - PlO: 12
+[2024-05-15 12:54:26]: Winner:  Winner is X Score: PlX: 96 - PlO: 12
+[2024-05-15 12:54:27]: Winner:  Winner is X Score: PlX: 97 - PlO: 12
+[2024-05-15 12:54:29]: Winner:  Winner is X Score: PlX: 98 - PlO: 12
+[2024-05-15 12:54:30]: Winner:  Winner is X Score: PlX: 99 - PlO: 12
+[2024-05-15 12:54:31]: Winner:  Winner is O Score: PlX: 99 - PlO: 13
+[2024-05-15 12:54:35]: Error: Wrong Place
+[2024-05-15 12:54:35]: Draw: Score: PlX: 99 - PlO: 13
+[2024-05-15 12:54:38]: Error: Wrong Place
+[2024-05-15 12:54:39]: Draw: Score: PlX: 99 - PlO: 13
+[2024-05-15 12:54:43]: Winner:  Winner is O Score: PlX: 99 - PlO: 14
+[2024-05-15 12:54:46]: Error: Wrong Place
+[2024-05-15 12:54:46]: Winner:  Winner is X Score: PlX: 100 - PlO: 14
+[2024-05-15 12:54:48]: Winner:  Winner is O Score: PlX: 100 - PlO: 15
+[2024-05-15 12:54:51]: Winner:  Winner is X Score: PlX: 101 - PlO: 15
+[2024-05-15 12:54:52]: Winner:  Winner is O Score: PlX: 101 - PlO: 16
+[2024-05-15 12:54:53]: Winner:  Winner is O Score: PlX: 101 - PlO: 17
+[2024-05-15 12:54:55]: Winner:  Winner is O Score: PlX: 101 - PlO: 18
+[2024-05-15 12:54:55]: Winner:  Winner is O Score: PlX: 101 - PlO: 19
+[2024-05-15 12:54:56]: Winner:  Winner is O Score: PlX: 101 - PlO: 20
+[2024-05-15 12:54:57]: Winner:  Winner is O Score: PlX: 101 - PlO: 21
+[2024-05-15 12:54:58]: Draw: Score: PlX: 101 - PlO: 21
+[2024-05-15 12:55:00]: Winner:  Winner is O Score: PlX: 101 - PlO: 22
+[2024-05-15 12:55:02]: Error: Wrong Place
+[2024-05-15 12:55:03]: Error: Wrong Place
+[2024-05-15 12:55:04]: Draw: Score: PlX: 101 - PlO: 22
+[2024-05-15 12:55:06]: Draw: Score: PlX: 101 - PlO: 22
+[2024-05-15 12:55:08]: Draw: Score: PlX: 101 - PlO: 22
+[2024-05-15 12:55:09]: Draw: Score: PlX: 101 - PlO: 22
+[2024-05-15 12:55:10]: Draw: Score: PlX: 101 - PlO: 22
+[2024-05-15 12:55:12]: Draw: Score: PlX: 101 - PlO: 22
+[2024-05-15 12:55:13]: Draw: Score: PlX: 101 - PlO: 22
+[2024-05-15 12:55:14]: Draw: Score: PlX: 101 - PlO: 22
+[2024-05-15 12:55:16]: Error: Wrong Place
+[2024-05-15 12:55:16]: Draw: Score: PlX: 101 - PlO: 22
+[2024-05-15 12:55:18]: Draw: Score: PlX: 101 - PlO: 22
+[2024-05-15 12:55:19]: Draw: Score: PlX: 101 - PlO: 22
+[2024-05-15 12:55:20]: Draw: Score: PlX: 101 - PlO: 22
+[2024-05-15 12:55:21]: Draw: Score: PlX: 101 - PlO: 22
+[2024-05-15 12:55:23]: Winner:  Winner is O Score: PlX: 101 - PlO: 23
+[2024-05-15 12:55:25]: Draw: Score: PlX: 101 - PlO: 23
+[2024-05-15 12:55:26]: Draw: Score: PlX: 101 - PlO: 23
+[2024-05-15 12:55:27]: Draw: Score: PlX: 101 - PlO: 23
+[2024-05-15 12:55:29]: Draw: Score: PlX: 101 - PlO: 23
+[2024-05-15 12:55:30]: Draw: Score: PlX: 101 - PlO: 23
+[2024-05-15 12:55:31]: Draw: Score: PlX: 101 - PlO: 23
+[2024-05-15 12:55:33]: Draw: Score: PlX: 101 - PlO: 23
+[2024-05-15 12:55:34]: Draw: Score: PlX: 101 - PlO: 23
+[2024-05-15 12:55:35]: Draw: Score: PlX: 101 - PlO: 23
+[2024-05-15 12:55:38]: App Closed
+
+[2024-05-15 13:15:54]: App Started
+[2024-05-15 13:16:01]: App Closed
+
+[2024-05-15 13:20:03]: App Started
+[2024-05-15 13:20:07]: App Closed
+
+[2024-05-15 13:20:45]: App Started
+[2024-05-15 13:20:48]: App Closed
+
+[2024-05-15 13:21:09]: App Started
+[2024-05-15 13:21:24]: App Closed
+
+[2024-05-15 13:22:45]: App Started
+[2024-05-15 13:22:54]: App Closed
+
+[2024-05-15 13:23:01]: App Started
+[2024-05-15 13:23:07]: App Closed
+
+[2024-05-15 13:24:45]: App Started
+[2024-05-15 13:24:48]: App Closed
+
+[2024-05-15 13:25:02]: App Started
+[2024-05-15 13:25:06]: App Closed
+
+[2024-05-15 13:25:07]: App Started
+[2024-05-15 13:31:33]: App Started
+[2024-05-15 13:31:41]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-15 13:31:45]: Winner:  Winner is O Score: PlX: 0 - PlO: 1
+[2024-05-15 13:31:46]: App Closed
+
+[2024-05-15 13:31:48]: App Started
+[2024-05-15 13:52:58]: App Started
+[2024-05-15 13:53:02]: App Closed
+
+[2024-05-15 13:53:47]: App Started
+[2024-05-15 13:53:53]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-15 13:53:56]: Winner:  Winner is O Score: PlX: 0 - PlO: 1
+[2024-05-15 13:53:58]: App Closed
+
+[2024-05-15 13:54:02]: App Started
+[2024-05-15 13:54:05]: App Closed
+
+[2024-05-15 13:54:21]: App Started
+[2024-05-15 13:54:24]: App Closed
+
+[2024-05-15 13:55:08]: App Started
+[2024-05-15 13:55:11]: App Closed
+
+[2024-05-15 13:55:43]: App Started
+[2024-05-15 13:55:49]: Error: Wrong Place
+[2024-05-15 13:55:51]: Draw: Score: PlX: 0 - PlO: 1
+[2024-05-15 13:55:52]: App Closed
+
+[2024-05-15 13:57:16]: App Started
+[2024-05-15 13:57:24]: App Closed
+
+[2024-05-15 14:01:43]: App Started
+[2024-05-15 14:01:47]: Winner:  Winner is O Score: PlX: 0 - PlO: 2
+[2024-05-15 14:01:49]: Winner:  Winner is O Score: PlX: 0 - PlO: 3
+[2024-05-15 14:03:07]: App Started
+[2024-05-15 14:05:02]: App Started
+[2024-05-15 14:05:06]: App Closed
+
+[2024-05-15 14:05:09]: App Started
+[2024-05-15 14:05:14]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-15 14:05:17]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-15 14:05:20]: Winner:  Winner is X Score: PlX: 1 - PlO: 0
+[2024-05-15 14:05:23]: App Closed
+
+[2024-05-15 14:05:25]: App Started
+[2024-05-15 14:05:30]: Draw: Score: PlX: 1 - PlO: 0
+[2024-05-15 14:05:32]: App Closed
+
+[2024-05-15 14:05:40]: App Started
+[2024-05-15 14:05:45]: Draw: Score: PlX: 1 - PlO: 0
+[2024-05-15 14:05:50]: Draw: Score: PlX: 1 - PlO: 0
+[2024-05-15 14:05:52]: App Closed
+
+[2024-05-15 14:05:54]: App Started
+[2024-05-15 14:06:00]: App Closed
+
+[2024-05-15 14:06:30]: App Started
+[2024-05-15 14:06:34]: App Closed
+
+[2024-05-15 14:06:36]: App Started
+[2024-05-15 14:06:39]: App Closed
+
+[2024-05-15 14:07:06]: App Started
+[2024-05-15 14:07:08]: App Closed
+
+[2024-05-15 14:14:08]: App Started
+[2024-05-15 14:14:11]: App Closed
+
+[2024-05-15 14:14:30]: App Started
+[2024-05-15 14:14:43]: App Closed
+
