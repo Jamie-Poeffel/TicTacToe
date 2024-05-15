@@ -28,3 +28,15 @@
 [2024-05-13 13:21:41]: Draw: Score: PlX: 0 - PlO: 3
 [2024-05-13 13:21:49]: App Closed
 
+[2024-05-15 12:30:33]: App Started
+[2024-05-15 12:30:54]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-15 12:30:59]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-15 12:31:05]: Error: Wrong Place
+[2024-05-15 12:31:06]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-15 12:31:12]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-15 12:31:16]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-15 12:31:21]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-15 12:31:26]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-15 12:31:29]: Winner:  Winner is X Score: PlX: 1 - PlO: 0
+[2024-05-15 12:31:37]: App Closed
+
