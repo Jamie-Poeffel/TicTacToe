@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Security.Permissions;
 using System.Text;
 using System.Threading;
@@ -63,11 +64,19 @@ namespace TicTacToe1._0
           Board[i, j].state = States.X;
           Board[i, j].Image = Properties.Resources.X;
         }
-        int[] a = AI.GetMove(Board, role % 2 == 0 ? States.X : States.O);
-        if (a[0] != -1 && a[1] != -1)
+        if (this.BtnAiOption.Text == "AI")
         {
-          Board[a[0], a[1]].state = States.O;
-          Board[a[0], a[1]].Image = Properties.Resources.O;
+          int[] a = AI.GetMove(Board, role % 2 == 0 ? States.X : States.O);
+          if (a[0] != -1 && a[1] != -1)
+          {
+            Board[a[0], a[1]].state = States.O;
+            Board[a[0], a[1]].Image = Properties.Resources.O;
+          }
+        }
+        else
+        {
+          Board[i, j].state = States.O;
+          Board[i, j].Image = Properties.Resources.O;
         }
 
         role += 2;
@@ -230,6 +239,36 @@ namespace TicTacToe1._0
       this.BtnOptions.Show();
       this.BtnResume.Show();
     }
+
+    private void OnExitOptionCLicke(object sender, EventArgs e)
+    {
+      HideOptions();
+      ShowMenu();
+    }
+
+    private void OnExitCliked(object sender, EventArgs e)
+    {
+      this.Close();
+    }
+
+    private void OnLogsClicked(object sender, EventArgs e)
+    {
+      string path = ".\\..\\..\\..\\Logs\\Logs.txt";
+    }
+
+    private void OnHumanAiClicked(object sender, EventArgs e)
+    {
+      if (this.BtnAiOption.Text == "Human")
+      {
+        this.BtnAiOption.Text = "AI";
+      }
+      else
+      {
+        this.BtnAiOption.Text = "Human";
+      }
+    }
+
+
     private void ShowOptions()
     {
       this.BtnAiOption.Show();

@@ -76,6 +76,7 @@
       this.BtnExit.TabIndex = 4;
       this.BtnExit.Text = "Exit";
       this.BtnExit.UseVisualStyleBackColor = true;
+      this.BtnExit.Click += new System.EventHandler(this.OnExitCliked);
       // 
       // BtnAiOption
       // 
@@ -86,6 +87,7 @@
       this.BtnAiOption.Text = "Human";
       this.BtnAiOption.UseVisualStyleBackColor = true;
       this.BtnAiOption.Visible = false;
+      this.BtnAiOption.Click += new System.EventHandler(this.OnHumanAiClicked);
       // 
       // BtnAiStrength
       // 
@@ -106,6 +108,7 @@
       this.BtnExitOptions.Text = "Exit";
       this.BtnExitOptions.UseVisualStyleBackColor = true;
       this.BtnExitOptions.Visible = false;
+      this.BtnExitOptions.Click += new System.EventHandler(this.OnExitOptionCLicke);
       // 
       // BtnLogs
       // 
@@ -116,6 +119,7 @@
       this.BtnLogs.Text = "Logs";
       this.BtnLogs.UseVisualStyleBackColor = true;
       this.BtnLogs.Visible = false;
+      this.BtnLogs.Click += new System.EventHandler(this.OnLogsClicked);
       // 
       // MainForms
       // 
