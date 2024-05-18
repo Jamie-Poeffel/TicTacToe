@@ -49,6 +49,8 @@
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(800, 450);
       this.Controls.Add(this.Outputlogs);
+      this.MaximumSize = new System.Drawing.Size(818, 497);
+      this.MinimumSize = new System.Drawing.Size(818, 497);
       this.Name = "Logs";
       this.Text = "Log";
       this.Load += new System.EventHandler(this.Logs_Load);
