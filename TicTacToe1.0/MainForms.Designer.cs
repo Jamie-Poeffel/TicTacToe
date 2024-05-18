@@ -36,6 +36,10 @@
       this.BtnAiStrength = new System.Windows.Forms.Button();
       this.BtnExitOptions = new System.Windows.Forms.Button();
       this.BtnLogs = new System.Windows.Forms.Button();
+      this.BtnPauseResume = new System.Windows.Forms.Button();
+      this.BtnPauseOption = new System.Windows.Forms.Button();
+      this.BtnExitPause = new System.Windows.Forms.Button();
+      this.BtnPause = new System.Windows.Forms.Button();
       this.SuspendLayout();
       // 
       // BtnNewGame
@@ -98,6 +102,7 @@
       this.BtnAiStrength.Text = "Strong";
       this.BtnAiStrength.UseVisualStyleBackColor = true;
       this.BtnAiStrength.Visible = false;
+      this.BtnAiStrength.Click += new System.EventHandler(this.OnBtnAIstrength);
       // 
       // BtnExitOptions
       // 
@@ -121,11 +126,59 @@
       this.BtnLogs.Visible = false;
       this.BtnLogs.Click += new System.EventHandler(this.OnLogsClicked);
       // 
+      // BtnPauseResume
+      // 
+      this.BtnPauseResume.Location = new System.Drawing.Point(13, 97);
+      this.BtnPauseResume.Name = "BtnPauseResume";
+      this.BtnPauseResume.Size = new System.Drawing.Size(275, 61);
+      this.BtnPauseResume.TabIndex = 9;
+      this.BtnPauseResume.Text = "Resume";
+      this.BtnPauseResume.UseVisualStyleBackColor = true;
+      this.BtnPauseResume.Visible = false;
+      this.BtnPauseResume.Click += new System.EventHandler(this.OnPauseResumeClicked);
+      // 
+      // BtnPauseOption
+      // 
+      this.BtnPauseOption.Location = new System.Drawing.Point(12, 165);
+      this.BtnPauseOption.Name = "BtnPauseOption";
+      this.BtnPauseOption.Size = new System.Drawing.Size(275, 60);
+      this.BtnPauseOption.TabIndex = 10;
+      this.BtnPauseOption.Text = "Options";
+      this.BtnPauseOption.UseVisualStyleBackColor = true;
+      this.BtnPauseOption.Visible = false;
+      this.BtnPauseOption.Click += new System.EventHandler(this.OnPauseOptionClicke);
+      // 
+      // BtnExitPause
+      // 
+      this.BtnExitPause.Location = new System.Drawing.Point(85, 268);
+      this.BtnExitPause.Name = "BtnExitPause";
+      this.BtnExitPause.Size = new System.Drawing.Size(125, 36);
+      this.BtnExitPause.TabIndex = 11;
+      this.BtnExitPause.Text = "Exit";
+      this.BtnExitPause.UseVisualStyleBackColor = true;
+      this.BtnExitPause.Visible = false;
+      this.BtnExitPause.Click += new System.EventHandler(this.OnBtnExitPauseClicked);
+      // 
+      // BtnPause
+      // 
+      this.BtnPause.Location = new System.Drawing.Point(258, 308);
+      this.BtnPause.Name = "BtnPause";
+      this.BtnPause.Size = new System.Drawing.Size(30, 30);
+      this.BtnPause.TabIndex = 12;
+      this.BtnPause.Text = "►";
+      this.BtnPause.UseVisualStyleBackColor = true;
+      this.BtnPause.Visible = false;
+      this.BtnPause.Click += new System.EventHandler(this.OnPauseClicked);
+      // 
       // MainForms
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 25F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(300, 350);
+      this.Controls.Add(this.BtnPause);
+      this.Controls.Add(this.BtnExitPause);
+      this.Controls.Add(this.BtnPauseOption);
+      this.Controls.Add(this.BtnPauseResume);
       this.Controls.Add(this.BtnLogs);
       this.Controls.Add(this.BtnExitOptions);
       this.Controls.Add(this.BtnAiStrength);
@@ -143,6 +196,8 @@
       this.Text = "Tictactoe";
       this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OnFormsClosing);
       this.Load += new System.EventHandler(this.OnFormsLoad);
+      this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.onKeyPressed);
+      this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.OnKeyUppressed);
       this.ResumeLayout(false);
 
     }
@@ -157,6 +212,10 @@
     private System.Windows.Forms.Button BtnAiStrength;
     private System.Windows.Forms.Button BtnExitOptions;
     private System.Windows.Forms.Button BtnLogs;
+    private System.Windows.Forms.Button BtnPauseResume;
+    private System.Windows.Forms.Button BtnPauseOption;
+    private System.Windows.Forms.Button BtnExitPause;
+    private System.Windows.Forms.Button BtnPause;
   }
 }
 

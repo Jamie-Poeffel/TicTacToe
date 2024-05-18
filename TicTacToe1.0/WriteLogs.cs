@@ -34,6 +34,9 @@ namespace TicTacToe1._0
       Task.Run(Wait);
       OnStartClose(i);
     }
+    public WriteLogs() 
+    {
+    }
 
     private void Write(string message)
     {
@@ -90,6 +93,19 @@ namespace TicTacToe1._0
       {
         await Task.Delay(1000);
       }
+    }
+    public string getLogs()
+    {
+      string value = string.Empty;
+      using (StreamReader reader = new StreamReader(FilePfad))
+      {
+        do
+        {
+          value += reader.ReadLine();
+          value += "?";
+        } while (!reader.EndOfStream);
+      }
+      return value;
     }
   }
 }

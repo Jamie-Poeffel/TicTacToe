@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Security.Permissions;
 using System.Text;
@@ -21,6 +22,19 @@ namespace TicTacToe1._0
     public int role = 0, xScore = 0, oScore = 0;
     AI AI = new AI();
     Label Lblscore = null;
+    bool pause = false;
+    [DllImport("user32.dll", SetLastError = true)]
+    static extern bool SetCursorPos(int X, int Y);
+
+    [DllImport("user32.dll")]
+    [return: MarshalAs(UnmanagedType.Bool)]
+    static extern bool GetCursorPos(out POINT lpPoint);
+
+    [DllImport("user32.dll")]
+    static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint dwData, int dwExtraInfo);
+
+    private const int MOUSEEVENTF_LEFTDOWN = 0x02;
+    private const int MOUSEEVENTF_LEFTUP = 0x04;
     public MainForms()
     {
       InitializeComponent();
@@ -41,6 +55,7 @@ namespace TicTacToe1._0
           this.Controls.Add(Board[i, j]);
         }
       LabelScore();
+      this.BtnPause.Visible = true;
     }
 
     private void LabelScore()
@@ -63,8 +78,10 @@ namespace TicTacToe1._0
         {
           Board[i, j].state = States.X;
           Board[i, j].Image = Properties.Resources.X;
+          checkWinner();
+          //if there are 9 buttons pressed send tho logs Draw and reset the bord
         }
-        if (this.BtnAiOption.Text == "AI")
+        if (this.BtnAiOption.Text == "AI" && this.BtnAiStrength.Text == "Strong")
         {
           int[] a = AI.GetMove(Board, role % 2 == 0 ? States.X : States.O);
           if (a[0] != -1 && a[1] != -1)
@@ -72,17 +89,47 @@ namespace TicTacToe1._0
             Board[a[0], a[1]].state = States.O;
             Board[a[0], a[1]].Image = Properties.Resources.O;
           }
+          checkWinner();
+          //if there are 9 buttons pressed send tho logs Draw and reset the bord
+          role += 1;
         }
-        else
+        if (this.BtnAiOption.Text == "AI" && this.BtnAiStrength.Text == "Medium")
+        {
+          int[] a = AI.MiniMax(Board, role % 2 == 0 ? States.X : States.O);
+          if (a[0] != -1 && a[1] != -1)
+          {
+            Board[a[0], a[1]].state = States.O;
+            Board[a[0], a[1]].Image = Properties.Resources.O;
+          }
+          checkWinner();
+          role += 1;
+        }
+        if (this.BtnAiOption.Text == "AI" && this.BtnAiStrength.Text == "Weak")
+        {
+          Random rand = new Random();
+          int[] a = new int[2];
+          do
+          {
+            a[0] = rand.Next(0, 3);
+            a[1] = rand.Next(0, 3);
+          } while (Board[a[0], a[1]].state != States.F);
+          if (a[0] != -1 && a[1] != -1)
+          {
+            Board[a[0], a[1]].state = States.O;
+            Board[a[0], a[1]].Image = Properties.Resources.O;
+          }
+          role += 1;
+          checkWinner();
+        }
+        if (this.BtnAiOption.Text == "Human" && role % 2 != 0)
         {
           Board[i, j].state = States.O;
           Board[i, j].Image = Properties.Resources.O;
+          checkWinner();
+          //if there are 9 buttons pressed send tho logs Draw and reset the bord
         }
-
-        role += 2;
-        checkWinner();
-        //if there are 9 buttons pressed send tho logs Draw and reset the bord
-        if (role == 10) { resteBord(); Log = new WriteLogs("Draw: Score: " + "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); };
+        if (role > 8) { resteBord(); Log = new WriteLogs("Draw: Score: " + "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); };
+        role += 1;
       }
       else
       {
@@ -90,7 +137,6 @@ namespace TicTacToe1._0
         Log = new WriteLogs("Error: Wrong Place");
       }
     }
-
     public void checkWinner()
     {
       // Rows
@@ -129,8 +175,12 @@ namespace TicTacToe1._0
     private void done(int i, int j)
     {
       // send the winner and the score to the logs and rest the bord and show the score on the score label
+#pragma warning disable CS1690 // Beim Zugriff auf ein Element zu einem Feld einer "Marshal by Reference"-Klasse kann eine Laufzeitausnahme ausgelöst werden
+#pragma warning disable CS1690 // Beim Zugriff auf ein Element zu einem Feld einer "Marshal by Reference"-Klasse kann eine Laufzeitausnahme ausgelöst werden
       if (Board[i, j].state == States.X) { xScore++; Log = new WriteLogs("Winner:  Winner is " + Board[i, j].state.ToString() + " Score: " + "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); }
+#pragma warning restore CS1690 // Beim Zugriff auf ein Element zu einem Feld einer "Marshal by Reference"-Klasse kann eine Laufzeitausnahme ausgelöst werden
       else { oScore++; Log = new WriteLogs("Winner:  Winner is " + Board[i, j].state.ToString() + " Score: " + "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); }
+#pragma warning restore CS1690 // Beim Zugriff auf ein Element zu einem Feld einer "Marshal by Reference"-Klasse kann eine Laufzeitausnahme ausgelöst werden
       resteBord();
       Lblscore.Text = "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString();
     }
@@ -167,6 +217,8 @@ namespace TicTacToe1._0
       {
         xScore = getscore('x');
         oScore = getscore('o');
+        this.BtnAiOption.Text = getData('o');
+        this.BtnAiStrength.Text = getData('s');
         HideMenu();
         Initial();
       }
@@ -176,6 +228,27 @@ namespace TicTacToe1._0
       }
     }
 
+    private string getData(char d)
+    {
+      string[] st = new string[2];
+      string value = "";
+      String Filepath = $".\\..\\..\\..\\SavedScores\\Saved.txt";
+      using (StreamReader stream = new StreamReader(Filepath))
+      {
+        value = stream.ReadLine();
+        value = stream.ReadLine();
+      }
+      st = value.Split(',');
+      if (d == 'o')
+      {
+        value = st[0];
+      }
+      else if (d == 's')
+      {
+        value = st[1];
+      }
+      return value;
+    }
     private void OnFormsClosing(object sender, FormClosingEventArgs e)
     {
       save();
@@ -192,7 +265,7 @@ namespace TicTacToe1._0
           File.Delete(Filepath);
           Thread.Sleep(700);
         }
-        File.WriteAllText(Filepath, $"{xScore},{oScore}" + "\n" + $"Score: PlX: {xScore} - PlO: {oScore}");
+        File.WriteAllText(Filepath, $"{xScore},{oScore}" + "\n" + $"{this.BtnAiOption.Text},{this.BtnAiStrength.Text}" + "\n" + $"Score: PlX: {xScore} - PlO: {oScore}");
       }
 
 
@@ -243,7 +316,13 @@ namespace TicTacToe1._0
     private void OnExitOptionCLicke(object sender, EventArgs e)
     {
       HideOptions();
-      ShowMenu();
+      if (pause)
+      {
+        ShowPause();
+        this.BtnPause.Visible = true;
+      }
+      else
+        ShowMenu();
     }
 
     private void OnExitCliked(object sender, EventArgs e)
@@ -253,7 +332,8 @@ namespace TicTacToe1._0
 
     private void OnLogsClicked(object sender, EventArgs e)
     {
-      string path = ".\\..\\..\\..\\Logs\\Logs.txt";
+      Logs log = new Logs();
+      log.Show();
     }
 
     private void OnHumanAiClicked(object sender, EventArgs e)
@@ -268,6 +348,91 @@ namespace TicTacToe1._0
       }
     }
 
+    private void OnBtnAIstrength(object sender, EventArgs e)
+    {
+      if (this.BtnAiStrength.Text == "Strong")
+      {
+        this.BtnAiStrength.Text = "Weak";
+      }
+      else if (this.BtnAiStrength.Text == "Weak")
+      {
+        this.BtnAiStrength.Text = "Medium";
+      }
+      else
+      {
+        this.BtnAiStrength.Text = "Strong";
+      }
+    }
+
+    private void OnKeyUppressed(object sender, KeyEventArgs e)
+    {
+
+    }
+
+    private void ShowPause()
+    {
+      BtnExitPause.Visible = true;
+      BtnPauseOption.Visible = true;
+      BtnPauseResume.Visible = true;
+    }
+
+    private void OnBtnExitPauseClicked(object sender, EventArgs e)
+    {
+      ShowMenu();
+      HideBoard();
+      HidePause();
+      this.Lblscore.Hide();
+      this.BtnPause.Visible = false;
+      pause = false;
+    }
+
+    private void HidePause()
+    {
+      BtnExitPause.Visible = false;
+      BtnPauseOption.Visible = false;
+      BtnPauseResume.Visible = false;
+    }
+
+    private void HideBoard()
+    {
+      foreach (var b in Board)
+      {
+        b.Hide();
+      }
+    }
+    private void ShowBoard()
+    {
+      foreach (var b in Board)
+      {
+        b.Show();
+      }
+    }
+
+    private void onKeyPressed(object sender, KeyPressEventArgs e)
+    {
+    }
+
+    private void OnPauseClicked(object sender, EventArgs e)
+    {
+      HideBoard();
+      ShowPause();
+      this.Lblscore.Hide();
+      pause = true;
+    }
+
+    private void OnPauseOptionClicke(object sender, EventArgs e)
+    {
+      HidePause();
+      this.BtnPause.Visible = false;
+      OnOptionClicked(sender, e);
+    }
+
+    private void OnPauseResumeClicked(object sender, EventArgs e)
+    {
+      HidePause();
+      ShowBoard();
+      this.Lblscore.Show();
+    }
 
     private void ShowOptions()
     {
@@ -283,5 +448,10 @@ namespace TicTacToe1._0
       this.BtnExitOptions.Hide();
       this.BtnLogs.Hide();
     }
+  }
+  public struct POINT
+  {
+    public int X;
+    public int Y;
   }
 }

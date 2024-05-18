@@ -116,8 +116,12 @@ namespace TicTacToe
     private void done(int i, int j)
     {
       // send the winner and the score to the logs and rest the bord and show the score on the score label
+#pragma warning disable CS1690 // Beim Zugriff auf ein Element zu einem Feld einer "Marshal by Reference"-Klasse kann eine Laufzeitausnahme ausgelöst werden
+#pragma warning disable CS1690 // Beim Zugriff auf ein Element zu einem Feld einer "Marshal by Reference"-Klasse kann eine Laufzeitausnahme ausgelöst werden
       if (Board[i, j].state == States.X) { xScore++; Log = new WriteLogs("Winner:  Winner is "+ Board[i, j].state.ToString() +" Score: "+ "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); }
+#pragma warning restore CS1690 // Beim Zugriff auf ein Element zu einem Feld einer "Marshal by Reference"-Klasse kann eine Laufzeitausnahme ausgelöst werden
       else { oScore++; Log = new WriteLogs("Winner:  Winner is " + Board[i, j].state.ToString() + " Score: " + "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); }
+#pragma warning restore CS1690 // Beim Zugriff auf ein Element zu einem Feld einer "Marshal by Reference"-Klasse kann eine Laufzeitausnahme ausgelöst werden
       resteBord();
       Lblscore.Text = "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString();
     }
