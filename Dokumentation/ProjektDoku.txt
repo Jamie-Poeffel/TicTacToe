@@ -1,3 +1,1 @@
-Ich werde ein TicTacToe Game erstellen in dem Zwei Spieler gegen einander Spielen können.
-Ich werde logs ein bauen so dass man sehen kann was falsch gelaufen ist und wer gewonnen hat.
-Ich werde auch versuchen eine Ai einzubauen dass man nicht immer einen gegner braucht.
+Ich werde ein spiel entwickeln das auf dem spiel tictactoe basiert. Ich werde in diesem spiel ein menu einbauen in dem man verschieden einstellungen einstellen kann wie z.B. Ob man gegen einen spieler spielen will oder gegen einen computer und wenn man den computer wählt wie stark der computer sein soll. oder man kann im menu auch die logs aufrufen und sehen was falsch gelaufen ist. dann werde ich auch eine pause menu einbauen in dem man die einstellungen auch ändern kann. beim start menu werde ich auch eine weiterspielen knopf machen das man das letzte gespielete game fortführen kann.
