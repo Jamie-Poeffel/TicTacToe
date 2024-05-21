@@ -437,9 +437,4 @@ namespace TicTacToe1._0
       this.BtnLogs.Hide();
     }
   }
-  public struct POINT
-  {
-    public int X;
-    public int Y;
-  }
 }
