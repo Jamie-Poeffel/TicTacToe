@@ -19,6 +19,7 @@ namespace TicTacToe1._0
   {
     WriteLogs Log = null;
     Pieces[,] Board = null;
+    String Path = @".\..\..\..\SavedScores\SaveScore.txt";
     public int role = 0, xScore = 0, oScore = 0;
     AI AI = new AI();
     Label Lblscore = null;
@@ -162,12 +163,8 @@ namespace TicTacToe1._0
     private void done(int i, int j)
     {
       // send the winner and the score to the logs and rest the bord and show the score on the score label
-#pragma warning disable CS1690 // Beim Zugriff auf ein Element zu einem Feld einer "Marshal by Reference"-Klasse kann eine Laufzeitausnahme ausgelöst werden
-#pragma warning disable CS1690 // Beim Zugriff auf ein Element zu einem Feld einer "Marshal by Reference"-Klasse kann eine Laufzeitausnahme ausgelöst werden
       if (Board[i, j].state == States.X) { xScore++; Log = new WriteLogs("Winner:  Winner is " + Board[i, j].state.ToString() + " Score: " + "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); }
-#pragma warning restore CS1690 // Beim Zugriff auf ein Element zu einem Feld einer "Marshal by Reference"-Klasse kann eine Laufzeitausnahme ausgelöst werden
       else { oScore++; Log = new WriteLogs("Winner:  Winner is " + Board[i, j].state.ToString() + " Score: " + "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); }
-#pragma warning restore CS1690 // Beim Zugriff auf ein Element zu einem Feld einer "Marshal by Reference"-Klasse kann eine Laufzeitausnahme ausgelöst werden
       resteBord();
       Lblscore.Text = "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString();
     }
@@ -198,9 +195,7 @@ namespace TicTacToe1._0
 
     private void OnResumeGameClicked(object sender, EventArgs e)
     {
-      String Filepath = $".\\..\\..\\..\\SavedScores\\Saved.txt";
-
-      if (File.Exists(Filepath))
+      if (File.Exists(Path))
       {
         xScore = getscore('x');
         oScore = getscore('o');
@@ -218,13 +213,12 @@ namespace TicTacToe1._0
     private string getData(char d)
     {
       string[] st = new string[2];
-      string value = "";
-      String Filepath = $".\\..\\..\\..\\SavedScores\\Saved.txt";
-      using (StreamReader stream = new StreamReader(Filepath))
+      string value = string.Empty;
+      using (StreamReader reader = new StreamReader(Path))
       {
-        value = stream.ReadLine();
-        value = stream.ReadLine();
-      }
+        value = reader.ReadLine();
+        value = reader.ReadLine();
+      };
       st = value.Split(',');
       if (d == 'o')
       {
@@ -243,31 +237,22 @@ namespace TicTacToe1._0
     }
     private void save()
     {
-      // save the file in the ordner SavedScores with a chosen filename
-      String Filepath = $".\\..\\..\\..\\SavedScores\\Saved.txt";
-      if (File.Exists(Filepath))
-      {
-        if (File.Exists(Filepath))
-        {
-          File.Delete(Filepath);
-          Thread.Sleep(700);
-        }
-        File.WriteAllText(Filepath, $"{xScore},{oScore}" + "\n" + $"{this.BtnAiOption.Text},{this.BtnAiStrength.Text}" + "\n" + $"Score: PlX: {xScore} - PlO: {oScore}");
-      }
-
-
+      if (File.Exists(Path)) File.Delete(Path);
+      File.WriteAllText(Path, $"{xScore.ToString()},{oScore.ToString()}" + "\n" 
+                            + $"{BtnAiOption.Text},{BtnAiStrength.Text}" + "\n"
+                            + $"Player X: {xScore.ToString()} - {oScore.ToString()} :Player O");
+      Thread.Sleep(1000);
     }
     private int getscore(char c)
     {
       string Sco = string.Empty;
       string[] st = new string[2];
-      string value = "";
-      String Filepath = $".\\..\\..\\..\\SavedScores\\Saved.txt";
-      using (StreamReader stream = new StreamReader(Filepath))
+      string value_ = string.Empty;
+      using (StreamReader reader = new StreamReader(Path))
       {
-        value = stream.ReadLine();
-      }
-      st = value.Split(',');
+          value_ = reader.ReadLine();
+      };
+      st = value_.Split(',');
       if (c == 'x')
       {
         Sco = st[0];

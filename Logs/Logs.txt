@@ -728,3 +728,73 @@
 
 [2024-05-18 21:22:18]: App Started
 [2024-05-18 21:23:08]: App Started
+[2024-05-21 13:44:43]: App Started
+[2024-05-21 13:44:52]: Error: Wrong Place
+[2024-05-21 13:44:53]: Winner:  Winner is O Score: PlX: 0 - PlO: 1
+[2024-05-21 13:44:54]: App Closed
+
+[2024-05-21 13:55:12]: App Started
+[2024-05-21 13:55:14]: App Closed
+
+[2024-05-21 13:55:16]: App Started
+[2024-05-21 13:55:18]: App Closed
+
+[2024-05-21 13:55:30]: App Started
+[2024-05-21 13:55:31]: App Closed
+
+[2024-05-21 14:14:10]: App Started
+[2024-05-21 14:15:06]: App Started
+[2024-05-21 14:15:09]: App Closed
+
+[2024-05-21 14:15:59]: App Started
+[2024-05-21 14:16:13]: App Started
+[2024-05-21 14:16:15]: App Closed
+
+[2024-05-21 14:16:22]: App Started
+[2024-05-21 14:28:26]: App Started
+[2024-05-21 14:28:30]: App Closed
+
+[2024-05-21 14:28:31]: App Started
+[2024-05-21 14:29:01]: App Started
+[2024-05-21 14:29:03]: App Closed
+
+[2024-05-21 14:29:04]: App Started
+[2024-05-21 14:30:26]: App Started
+[2024-05-21 14:30:27]: App Closed
+
+[2024-05-21 14:52:10]: App Started
+[2024-05-21 14:52:19]: App Started
+[2024-05-21 14:52:21]: App Closed
+
+[2024-05-21 14:52:22]: App Started
+[2024-05-21 14:52:50]: App Started
+[2024-05-21 14:52:52]: App Closed
+
+[2024-05-21 14:52:53]: App Started
+[2024-05-21 14:53:16]: App Started
+[2024-05-21 14:53:33]: App Started
+[2024-05-21 14:53:34]: App Closed
+
+[2024-05-21 14:53:36]: App Started
+[2024-05-21 14:53:51]: App Started
+[2024-05-21 14:54:57]: App Started
+[2024-05-21 14:54:59]: App Closed
+
+[2024-05-21 14:55:00]: App Started
+[2024-05-21 14:55:10]: App Started
+[2024-05-21 14:55:22]: App Started
+[2024-05-21 14:55:36]: App Closed
+
+[2024-05-21 14:57:12]: App Started
+[2024-05-21 14:57:15]: App Closed
+
+[2024-05-21 14:57:18]: App Started
+[2024-05-21 14:58:48]: App Started
+[2024-05-21 14:58:52]: App Closed
+
+[2024-05-21 14:58:53]: App Started
+[2024-05-21 15:00:15]: App Started
+[2024-05-21 15:10:05]: App Started
+[2024-05-21 15:10:08]: App Closed
+
+[2024-05-21 15:10:10]: App Started
