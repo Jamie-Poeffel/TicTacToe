@@ -27,7 +27,6 @@ namespace TicTacToe1._0
     {
       InitializeComponent();
     }
-
     private void Initial()
     {
       Board = new Pieces[3, 3];
