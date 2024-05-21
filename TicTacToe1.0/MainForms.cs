@@ -23,18 +23,6 @@ namespace TicTacToe1._0
     AI AI = new AI();
     Label Lblscore = null;
     bool pause = false;
-    [DllImport("user32.dll", SetLastError = true)]
-    static extern bool SetCursorPos(int X, int Y);
-
-    [DllImport("user32.dll")]
-    [return: MarshalAs(UnmanagedType.Bool)]
-    static extern bool GetCursorPos(out POINT lpPoint);
-
-    [DllImport("user32.dll")]
-    static extern void mouse_event(uint dwFlags, uint dx, uint dy, uint dwData, int dwExtraInfo);
-
-    private const int MOUSEEVENTF_LEFTDOWN = 0x02;
-    private const int MOUSEEVENTF_LEFTUP = 0x04;
     public MainForms()
     {
       InitializeComponent();
