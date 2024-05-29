@@ -798,3 +798,18 @@
 [2024-05-21 15:10:08]: App Closed
 
 [2024-05-21 15:10:10]: App Started
+[2024-05-25 13:17:03]: App Started
+[2024-05-25 13:18:18]: App Started
+[2024-05-25 13:18:20]: App Closed
+
+[2024-05-25 13:18:45]: App Started
+[2024-05-25 13:18:54]: Winner:  Winner is X Score: PlX: 1 - PlO: 0
+[2024-05-25 13:18:57]: App Closed
+
+[2024-05-25 13:18:58]: App Started
+[2024-05-25 13:19:01]: App Closed
+
+[2024-05-29 12:30:06]: App Started
+[2024-05-29 12:30:17]: Winner:  Winner is O Score: PlX: 0 - PlO: 1
+[2024-05-29 12:30:22]: App Closed
+

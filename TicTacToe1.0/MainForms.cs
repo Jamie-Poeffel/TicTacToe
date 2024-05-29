@@ -216,10 +216,11 @@ namespace TicTacToe1._0
       string value = string.Empty;
       using (StreamReader reader = new StreamReader(Path))
       {
-        value = reader.ReadLine();
-        value = reader.ReadLine();
+        value = reader.ReadToEnd();
       };
-      st = value.Split(',');
+      value = BitsToString(value);
+      st = value.Split('§');
+      st = st[1].Split(',');
       if (d == 'o')
       {
         value = st[0];
@@ -238,9 +239,8 @@ namespace TicTacToe1._0
     private void save()
     {
       if (File.Exists(Path)) File.Delete(Path);
-      File.WriteAllText(Path, $"{xScore.ToString()},{oScore.ToString()}" + "\n" 
-                            + $"{BtnAiOption.Text},{BtnAiStrength.Text}" + "\n"
-                            + $"Player X: {xScore.ToString()} - {oScore.ToString()} :Player O");
+      File.WriteAllText(Path, StringToBits($"{xScore.ToString()},{oScore.ToString()}" + "§\n"
+                            + $"{BtnAiOption.Text},{BtnAiStrength.Text}"));
       Thread.Sleep(1000);
     }
     private int getscore(char c)
@@ -250,9 +250,11 @@ namespace TicTacToe1._0
       string value_ = string.Empty;
       using (StreamReader reader = new StreamReader(Path))
       {
-          value_ = reader.ReadLine();
+          value_ = reader.ReadToEnd();
       };
-      st = value_.Split(',');
+      value_ = BitsToString(value_);
+      st = value_.Split('§');
+      st = st[0].Split(',');
       if (c == 'x')
       {
         Sco = st[0];
@@ -419,6 +421,41 @@ namespace TicTacToe1._0
       this.BtnAiStrength.Hide();
       this.BtnExitOptions.Hide();
       this.BtnLogs.Hide();
+    }
+
+    private static string StringToBits(string s)
+    {
+      string result = "";
+      foreach (char c in s)
+      {
+        // Convert character to its ASCII value
+        int asciiValue = Convert.ToInt32(c);
+        // Convert ASCII value to binary and pad with leading zeros to ensure it's 8 bits long
+        string binaryValue = Convert.ToString(asciiValue, 2).PadLeft(8, '0');
+        result += binaryValue;
+      }
+      return result;
+    }
+    private static string BitsToString(string binaryString)
+    {
+      // Ensure the binary string's length is a multiple of 8
+      if (binaryString.Length % 8 != 0)
+      {
+        throw new ArgumentException("Binary string length must be a multiple of 8.");
+      }
+
+      string result = "";
+      for (int i = 0; i < binaryString.Length; i += 8)
+      {
+        // Get the current 8-bit chunk
+        string byteString = binaryString.Substring(i, 8);
+        // Convert the 8-bit chunk to an integer (ASCII value)
+        int asciiValue = Convert.ToInt32(byteString, 2);
+        // Convert the ASCII value to the corresponding character
+        char character = Convert.ToChar(asciiValue);
+        result += character;
+      }
+      return result;
     }
   }
 }
