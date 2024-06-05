@@ -91,6 +91,7 @@
       this.BtnAiOption.Text = "Human";
       this.BtnAiOption.UseVisualStyleBackColor = true;
       this.BtnAiOption.Visible = false;
+      this.BtnAiOption.TextChanged += new System.EventHandler(this.OnTextChanged);
       this.BtnAiOption.Click += new System.EventHandler(this.OnHumanAiClicked);
       // 
       // BtnAiStrength

@@ -116,8 +116,8 @@ namespace TicTacToe1._0
           checkWinner();
           //if there are 9 buttons pressed send tho logs Draw and reset the bord
         }
-        if (role > 8) { resteBord(); Log = new WriteLogs("Draw: Score: " + "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); };
         role += 1;
+        if (role > 8) { resteBord(); Log = new WriteLogs("Draw: Score: " + "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); };
       }
       else
       {
@@ -134,7 +134,7 @@ namespace TicTacToe1._0
           && Board[i, 1].state == Board[i, 2].state
           && Board[i, 1].state != States.F)
         {
-          done(i, 1);
+          Done(i, 1);
           return;
         }
       // Colunms
@@ -144,7 +144,7 @@ namespace TicTacToe1._0
           && Board[1, j].state == Board[2, j].state
           && Board[1, j].state != States.F)
         {
-          done(1, j);
+          Done(1, j);
           return;
         }
 
@@ -153,14 +153,14 @@ namespace TicTacToe1._0
       if (Board[0, 0].state == Board[1, 1].state
         && Board[1, 1].state == Board[2, 2].state
         && Board[1, 1].state != States.F)
-        done(1, 1);
+        Done(1, 1);
       else if (Board[0, 2].state == Board[1, 1].state
       && Board[1, 1].state == Board[2, 0].state
       && Board[1, 1].state != States.F)
-        done(1, 1);
+        Done(1, 1);
     }
 
-    private void done(int i, int j)
+    private void Done(int i, int j)
     {
       // send the winner and the score to the logs and rest the bord and show the score on the score label
       if (Board[i, j].state == States.X) { xScore++; Log = new WriteLogs("Winner:  Winner is " + Board[i, j].state.ToString() + " Score: " + "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); }
@@ -423,14 +423,19 @@ namespace TicTacToe1._0
       this.BtnLogs.Hide();
     }
 
+    private void OnTextChanged(object sender, EventArgs e)
+    {
+      if (Board != null) 
+        resteBord();
+    }
+
     private static string StringToBits(string s)
     {
+      //Converts a string into binary for saving the result data
       string result = "";
       foreach (char c in s)
       {
-        // Convert character to its ASCII value
         int asciiValue = Convert.ToInt32(c);
-        // Convert ASCII value to binary and pad with leading zeros to ensure it's 8 bits long
         string binaryValue = Convert.ToString(asciiValue, 2).PadLeft(8, '0');
         result += binaryValue;
       }
@@ -438,7 +443,7 @@ namespace TicTacToe1._0
     }
     private static string BitsToString(string binaryString)
     {
-      // Ensure the binary string's length is a multiple of 8
+      //Converts a binary string to a String that is readable
       if (binaryString.Length % 8 != 0)
       {
         throw new ArgumentException("Binary string length must be a multiple of 8.");
@@ -447,11 +452,8 @@ namespace TicTacToe1._0
       string result = "";
       for (int i = 0; i < binaryString.Length; i += 8)
       {
-        // Get the current 8-bit chunk
         string byteString = binaryString.Substring(i, 8);
-        // Convert the 8-bit chunk to an integer (ASCII value)
         int asciiValue = Convert.ToInt32(byteString, 2);
-        // Convert the ASCII value to the corresponding character
         char character = Convert.ToChar(asciiValue);
         result += character;
       }

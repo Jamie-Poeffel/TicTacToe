@@ -813,3 +813,42 @@
 [2024-05-29 12:30:17]: Winner:  Winner is O Score: PlX: 0 - PlO: 1
 [2024-05-29 12:30:22]: App Closed
 
+[2024-05-29 13:11:50]: App Started
+[2024-05-29 13:12:00]: Draw: Score: PlX: 0 - PlO: 0
+[2024-05-29 13:12:07]: Winner:  Winner is O Score: PlX: 0 - PlO: 1
+[2024-05-29 13:12:10]: Draw: Score: PlX: 0 - PlO: 1
+[2024-05-29 13:12:13]: Winner:  Winner is O Score: PlX: 0 - PlO: 2
+[2024-05-29 13:12:19]: Draw: Score: PlX: 0 - PlO: 2
+[2024-05-29 13:12:24]: Winner:  Winner is O Score: PlX: 0 - PlO: 3
+[2024-05-29 13:12:27]: Draw: Score: PlX: 0 - PlO: 3
+[2024-05-29 13:12:34]: Winner:  Winner is O Score: PlX: 0 - PlO: 4
+[2024-05-29 13:12:36]: App Closed[2024-05-29 13:13:00]: App Started
+[2024-05-29 13:13:04]: Winner:  Winner is X Score: PlX: 1 - PlO: 0
+[2024-05-29 13:13:10]: Winner:  Winner is O Score: PlX: 1 - PlO: 1
+[2024-05-29 13:14:03]: App Closed
+
+[2024-05-29 13:18:07]: App Started
+[2024-05-29 13:18:23]: Winner:  Winner is X Score: PlX: 2 - PlO: 1
+[2024-05-29 13:18:26]: Winner:  Winner is X Score: PlX: 3 - PlO: 1
+[2024-05-29 13:18:29]: App Closed
+
+[2024-05-29 13:18:31]: App Started
+[2024-05-29 13:18:35]: App Closed
+
+[2024-06-05 12:36:47]: App Started
+[2024-06-05 12:44:36]: Winner:  Winner is O Score: PlX: 0 - PlO: 1
+[2024-06-05 12:44:43]: Winner:  Winner is X Score: PlX: 1 - PlO: 1
+[2024-06-05 12:46:57]: Winner:  Winner is O Score: PlX: 1 - PlO: 2
+[2024-06-05 12:47:19]: Draw: Score: PlX: 1 - PlO: 2
+[2024-06-05 12:48:09]: App Started
+[2024-06-05 12:48:18]: Winner:  Winner is O Score: PlX: 0 - PlO: 1
+[2024-06-05 12:51:16]: App Started
+[2024-06-05 12:52:05]: App Started
+[2024-06-05 12:52:26]: Draw: Score: PlX: 0 - PlO: 0
+[2024-06-05 12:52:31]: Error: Wrong Place
+[2024-06-05 12:52:32]: Draw: Score: PlX: 0 - PlO: 0
+[2024-06-05 12:52:38]: Draw: Score: PlX: 0 - PlO: 0
+[2024-06-05 12:52:45]: Draw: Score: PlX: 0 - PlO: 0
+[2024-06-05 12:53:32]: App Started
+[2024-06-05 12:54:23]: App Started
+[2024-06-05 12:54:36]: Winner:  Winner is X Score: PlX: 1 - PlO: 0
