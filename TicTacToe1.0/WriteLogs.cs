@@ -17,17 +17,17 @@ namespace TicTacToe1._0
     // sdie app geöffet wurde und wann sie geschlossen wurde.
     public WriteLogs(Exception e)
     {
-      Task.Run(Wait);
+      Task.WaitAny(Task.Run(Wait));
       Exep(e);
     }
     public WriteLogs(string message)
     {
-      Task.Run(Wait);
+      Task.WaitAny(Task.Run(Wait));
       Write(message);
     }
     public WriteLogs(byte i)
     {
-      Task.Run(Wait);
+      Task.WaitAny(Task.Run(Wait));
       OnStartClose(i);
     }
     public WriteLogs() 
@@ -78,17 +78,17 @@ namespace TicTacToe1._0
       }
     }
     static async Task Wait()
-    {
-      // Dieser Task erstellt das file Logs.txt wenn es nicht vorhanden ist und wartet bis es benutzt werden kann.
-      if (!File.Exists(FilePfad))
-      {
-        File.WriteAllText(FilePfad, $"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}]: Logs Erstellt\n");
-      }
+    {   
+        // Dieser Task erstellt das file Logs.txt wenn es nicht vorhanden ist und wartet bis es benutzt werden kann.
+        if (!File.Exists(FilePfad))
+        {
+          File.WriteAllText(FilePfad, $"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}]: Logs Erstellt\n");
+        }
 
-      while (!File.Exists(FilePfad))
-      {
-        await Task.Delay(1000);
-      }
+        while (!File.Exists(FilePfad))
+        {
+          await Task.Delay(1000);
+        }
     }
     public string getLogs()
     {
