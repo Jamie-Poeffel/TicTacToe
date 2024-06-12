@@ -153,9 +153,11 @@ namespace TicTacToe1._0
 
     private void Done(int i, int j)
     {
+      var board = Board[i, j];
+      var state = board.state;
       // send the winner and the score to the logs and rest the bord and show the score on the score label
-      if (Board[i, j].state == States.X) { xScore++; Log = new WriteLogs("Winner:  Winner is " + Board[i, j].state.ToString() + " Score: " + "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); }
-      else { oScore++; Log = new WriteLogs("Winner:  Winner is " + Board[i, j].state.ToString() + " Score: " + "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); }
+      if (Board[i, j].state == States.X) { xScore++; Log = new WriteLogs("Winner:  Winner is " + state.ToString() + " Score: " + "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); }
+      else { oScore++; Log = new WriteLogs("Winner:  Winner is " + state.ToString() + " Score: " + "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString()); }
       resteBord();
       Lblscore.Text = "PlX: " + xScore.ToString() + " - " + "PlO: " + oScore.ToString();
     }
