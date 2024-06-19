@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TicTacToe
+namespace TicTacToe1._0
 {
   public class WriteLogs
   {
@@ -21,18 +17,21 @@ namespace TicTacToe
     // sdie app geöffet wurde und wann sie geschlossen wurde.
     public WriteLogs(Exception e)
     {
-      Task.Run(Wait);
+      Task.WaitAny(Task.Run(Wait));
       Exep(e);
     }
     public WriteLogs(string message)
     {
-      Task.Run(Wait);
+      Task.WaitAny(Task.Run(Wait));
       Write(message);
     }
     public WriteLogs(byte i)
     {
-      Task.Run(Wait);
+      Task.WaitAny(Task.Run(Wait));
       OnStartClose(i);
+    }
+    public WriteLogs() 
+    {
     }
 
     private void Write(string message)
@@ -79,17 +78,30 @@ namespace TicTacToe
       }
     }
     static async Task Wait()
-    {
-      // Dieser Task erstellt das file Logs.txt wenn es nicht vorhanden ist und wartet bis es benutzt werden kann.
-      if (!File.Exists(FilePfad))
-      {
-        File.WriteAllText(FilePfad, $"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}]: Logs Erstellt\n");
-      }
+    {   
+        // Dieser Task erstellt das file Logs.txt wenn es nicht vorhanden ist und wartet bis es benutzt werden kann.
+        if (!File.Exists(FilePfad))
+        {
+          File.WriteAllText(FilePfad, $"[{DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")}]: Logs Erstellt\n");
+        }
 
-      while (!File.Exists(FilePfad))
+        while (!File.Exists(FilePfad))
+        {
+          await Task.Delay(1000);
+        }
+    }
+    public string getLogs()
+    {
+      string value = string.Empty;
+      using (StreamReader reader = new StreamReader(FilePfad))
       {
-        await Task.Delay(1000);
+        do
+        {
+          value += reader.ReadLine();
+          value += "?";
+        } while (!reader.EndOfStream);
       }
+      return value;
     }
   }
 }

@@ -6,16 +6,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TicTacToe
+namespace TicTacToe1._0
 {
   // the Pieces can be in one of those three states 
-  enum States
+  internal enum States
   {
     X,
     O,
     F
   }
-  class Pieces : Button
+
+  internal class Pieces : Button
   {
     public States state = States.F;
     //Create buttons for the grid
